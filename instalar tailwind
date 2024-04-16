@@ -9,7 +9,7 @@ npx tailwindcss init
 
 //modificar el config (cualquier archivo que este en src se ejecutar para mostrar los estilos, osea si, todos los archivos tienen que estar en la carpeta src)
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js,php}"],
   theme: {
     extend: {},
   },
