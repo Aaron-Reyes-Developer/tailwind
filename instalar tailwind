@@ -1,0 +1,33 @@
+//iniciar los scripst
+npm init -y
+
+//instalar tailwind
+npm install -D tailwindcss
+
+//crar el archivo tailwind.config
+npx tailwindcss init
+
+//modificar el config (cualquier archivo que este en src se ejecutar para mostrar los estilos, osea si, todos los archivos tienen que estar en la carpeta src)
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+//directiva en el css input.css (ponerlo en una carpeta 'estilos' para tener buena practica)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//en la carpeta package.json editar en la parte de escripts
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw" : "npx tailwindcss -i ./src/estilos/input.css -o ./src/estilos/output.css --watch"
+  },
+
+
+// ejecutar tw
+npm run tw
